@@ -16,6 +16,6 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Run script
+    - name: Run script in test mode
       run: |
-        python library_manager.py
+        python library_manager.py test
