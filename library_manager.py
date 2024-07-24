@@ -92,4 +92,9 @@ def main_menu(test_mode=False):
                 print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    main_menu(test_mode=True)  # Set test_mode to True for non-interactive mode
+    import sys
+    # Check if 'test' is passed as a command-line argument
+    if 'test' in sys.argv:
+        main_menu(test_mode=True)
+    else:
+        main_menu(test_mode=False)
